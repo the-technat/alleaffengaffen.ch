@@ -1,11 +1,14 @@
+/* Import a css files that defines all fonts */
+@import url(../fonts/fonts.css);
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
   background-color: #101010;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: rubik;
+  font-style: light;
   font-size: 14px;
 }
 

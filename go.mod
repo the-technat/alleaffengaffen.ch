@@ -1,4 +1,4 @@
-module github.com/bep/gallerydeluxe_starter
+module github.com/alleaffengaffen/alleaffengaffen
 
 go 1.19
 
