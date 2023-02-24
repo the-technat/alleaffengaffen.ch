@@ -19,3 +19,4 @@ RUN chown root:root /usr/bin/caddy
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=hugo /target /usr/share/caddy/
+VOLUME ["/config/caddy"]
