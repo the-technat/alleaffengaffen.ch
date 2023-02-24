@@ -19,8 +19,6 @@ LABEL org.opencontainers.image.base.name = "docker.io/caddy:latest"
 RUN chown root:root /usr/bin/caddy
 COPY --chown=root:root Caddyfile /etc/caddy/Caddyfile
 COPY --chown=root:root --from=hugo /target /usr/share/caddy/
-# And those are the places I need to write data
-VOLUME ["/config/caddy"]
 
 # Any UID will do it, this is just the default if you omit it
 USER 10000
