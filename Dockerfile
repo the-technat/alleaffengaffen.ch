@@ -15,8 +15,12 @@ LABEL org.opencontainers.image.vendor = "alleaffengaffen"
 LABEL org.opencontainers.image.authors = "the-technat"
 LABEL org.opencontainers.image.base.name = "docker.io/caddy:latest"
 
+# Those are the files the app needs (all owned by root, arbitrary users can read/execute):
 RUN chown root:root /usr/bin/caddy
-
-COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=hugo /target /usr/share/caddy/
+COPY --chown=root:root Caddyfile /etc/caddy/Caddyfile
+COPY --chown=root:root --from=hugo /target /usr/share/caddy/
+# And those are the places I need to write data
 VOLUME ["/config/caddy"]
+
+# Any UID will do it, this is just the default if you omit it
+USER 10000
