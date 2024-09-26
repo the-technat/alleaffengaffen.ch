@@ -23,13 +23,11 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.121.2
     steps:
-			- name: Setup Hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.119.0'
+          hugo-version: '0.134.3'
           extended: true
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
