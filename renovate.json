@@ -3,6 +3,12 @@
   "extends": [
     "config:recommended"
   ],
+	"packageRules": [
+    {
+      "matchPackageNames": ["gohugoio/hugo"],
+      "extractVersion": "^v(?<version>.*)$"
+    }
+  ],
 	"customManagers": [
     {
       "customType": "regex",
