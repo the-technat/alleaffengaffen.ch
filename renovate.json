@@ -2,5 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+	"customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^\\.github/workflows/[^/]+\\.ya?ml$"
+      ],
+      "matchStringsStrategy": "combination",
+      "matchStrings": [
+        "uses: peaceiris/actions-hugo@v*\\s",
+        "hugo-version: (?<currentValue>.*?)\\s"
+      ],
+      "packageNameTemplate": "gohugoio/hugo",
+      "datasourceTemplate": "github-tags"
+    }
   ]
 }
