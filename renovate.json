@@ -3,6 +3,9 @@
   "extends": [
     "config:recommended"
   ],
+  "postUpdateOptions": [
+    "goModTidy"
+   ],
 	"packageRules": [
     {
       "matchPackageNames": ["gohugoio/hugo"],

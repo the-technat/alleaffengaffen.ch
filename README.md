@@ -7,9 +7,3 @@ alleaffengaffen.ch website files
 There's an image available to use as demo-app: `ghcr.io/the-technat/alleaffengaffen.ch:latest`
 
 It should work with almost all security best-practices.
-
-## Update
-
-Run: `hugo mod get -u` to update the gallery.
-
-The other updates are done by renovate.
