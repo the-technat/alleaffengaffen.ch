@@ -20,8 +20,7 @@
       ],
       "matchStringsStrategy": "combination",
       "matchStrings": [
-        "uses: peaceiris/actions-hugo@v*\\s",
-        "hugo-version: (?<currentValue>.*?)\\s"
+        "HUGO_VERSION: (?<currentValue>.*?)\\s"
       ],
       "packageNameTemplate": "gohugoio/hugo",
       "datasourceTemplate": "github-tags"
