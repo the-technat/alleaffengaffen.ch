@@ -1,8 +1,9 @@
 name: Build image
 
 on:
-  push:
-    branches: ['main']
+  workflow_dispatch:
+  #push:
+  # branches: ['main']
 
 env:
   REGISTRY: ghcr.io
@@ -40,5 +41,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
