@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: alleafengaffen-website
+  description: A Website interesting for monkeys
+spec:
+  type: website
+  lifecycle: production
+  owner: guests
